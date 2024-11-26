@@ -1,1 +1,1 @@
-The AuctionSystem folder is the project directory. The pdf file is the specification of the online auction service.
+"AuctionSystem" is the project directory. "Online Auction System Specification.pdf" is the specification of the online auction service.
