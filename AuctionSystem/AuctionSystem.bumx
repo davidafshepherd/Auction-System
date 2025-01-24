@@ -1,0 +1,295 @@
+machine AuctionSystem sees AuctionSystemContext
+variables 
+registeredUser				//Set of registered users
+loggedInUser				//Set of registered users that are currently logged in
+activeID					//Set of login IDs that belong to registered users
+userName					//Set of total function from user to their name
+userID						//Set of total bijective function from user to their login ID
+userPassword				//Set of total function from user to their password
+userPoints					//Set of total function from user to their penalty points
+userFeedback				//Set of relation from user to their feedback
+createdAuction				//Set of auctions that have been created
+startedAuction				//Set of auctions that have started
+cancelledAuction			//Set of auctions that were cancelled
+endedAuction				//Set of auctions that have ended
+auctionedItem				//Set of items being auctioned
+auctionSeller				//Set of total function from auction to its seller
+auctionItem					//Set of total bijective function from auction to its item
+itemName					//Set of total function from item to its name
+auctionReservePrice			//Set of total function from auction to its reserve price
+auctionHighestBidder		//Set of partial function from auction to its highest bidder
+auctionBid					//Set of relation from auction to its bids
+auctionBidder				//Set of relation from auction to its bidders
+auctionStatus				//Set of total function from auction to its state
+
+invariants
+	@inv1: registeredUser ⊆ USER								//Registered users is a subset of users
+	@inv2: loggedInUser  ⊆ registeredUser						//Logged in users is a subset of registered users
+	@inv3: activeID ⊆ ID										//IDs of registered users is a subset of IDs
+	@inv4: userName ∈ registeredUser → NAME							
+	@inv5: userID ∈ registeredUser ⤖ activeID								
+	@inv6: userPassword ∈ registeredUser → PASSWORD					
+	@inv7: userPoints ∈ registeredUser → ℕ	
+	@inv8: userFeedback ∈ registeredUser ↔ FEEDBACK 
+	@inv9: createdAuction ⊆ AUCTION								//Auctions that have been created is a subset of auctions
+	@inv10: startedAuction ⊆ createdAuction						//Auctions that have started is a subset of created auctions						
+	@inv11: endedAuction ⊆ createdAuction						//Auctions that have ended is a subset of created auctions
+	@inv12:	cancelledAuction ⊆ createdAuction
+	@inv13: startedAuction ∩ endedAuction = ∅					//No auction can be ongoing and ended at the same time
+	@inv14: startedAuction ∩ cancelledAuction = ∅
+	@inv15: endedAuction ∩ cancelledAuction = ∅
+	@inv16: startedAuction ∩ endedAuction ∩ cancelledAuction = ∅
+	@inv17: auctionedItem ⊆ ITEM
+	@inv18: auctionSeller ∈ createdAuction → registeredUser
+	@inv19: auctionItem ∈ createdAuction ⤖ auctionedItem								
+	@inv20: itemName ∈ auctionedItem → ITEMNAME																	
+	@inv21: auctionReservePrice ∈ createdAuction → ℕ1
+	@inv22: auctionHighestBidder ∈ (startedAuction ∪ endedAuction ∪ cancelledAuction) ⇸ registeredUser
+	@inv23: auctionBid ∈ (startedAuction ∪ endedAuction ∪ cancelledAuction) ↔ ℕ1
+	@inv24: auctionBidder ∈ (startedAuction ∪ endedAuction ∪ cancelledAuction) ↔ registeredUser
+	@inv25: auctionStatus ∈ (startedAuction ∪ endedAuction) → STATUS
+
+events
+	//Initializes variables
+	event INITIALISATION  
+  	then
+    	@act1: registeredUser, loggedInUser ≔ ∅, ∅
+    	@act2: activeID ≔ ∅
+    	@act3: userName, userID, userPassword, userPoints, userFeedback ≔ ∅, ∅, ∅, ∅, ∅
+    	@act4: createdAuction, startedAuction, endedAuction, cancelledAuction ≔ ∅, ∅, ∅, ∅
+    	@act5: auctionedItem, auctionSeller, auctionItem, auctionReservePrice ≔ ∅, ∅, ∅, ∅
+    	@act6: itemName ≔ ∅
+    	@act7: auctionHighestBidder, auctionBidder, auctionBid ≔ ∅, ∅, ∅
+    	@act8: auctionStatus ≔ ∅
+    end
+
+	//Register users
+  	event RegisterUser
+	any user name loginID password where
+		@grd1: user ∈ (USER ∖ registeredUser)			//User must be of type user but not registered
+		@grd2: name ∈ NAME								//User's name must be of type name
+		@grd3: loginID ∈ (ID ∖ activeID)				//Login ID must be of type ID but not belong to a registered user
+		@grd4: password ∈ PASSWORD						//Password must be of type password
+  	then
+		@act1: registeredUser ≔ registeredUser ∪ {user}
+		@act2: activeID ≔ activeID ∪ {loginID}
+		@act3: userName ≔ userName ∪ {user ↦ name}
+		@act4: userID ≔ userID ∪ {user ↦ loginID}
+		@act5: userPassword ≔ userPassword ∪ {user ↦ password}
+		@act6: userPoints ≔ userPoints ∪ {user ↦ 0}
+  	end
+  	
+  	//Logs users in
+  	event UserLogsIn
+  	any user loginID password where
+  		@grd1: user ∈ registeredUser					//User must be registered
+  		@grd2: user ∉ loggedInUser						//User must not be logged in
+  		@grd3: (user ↦ loginID) ∈  userID				//Login ID entered must match user's login ID
+  		@grd4: (user ↦ password) ∈ userPassword			//Password entered must match user's password
+  	then
+  		@act2: loggedInUser ≔ loggedInUser ∪ {user}
+	end
+	
+	//Logs users out
+	event UserLogsOut
+  	any user where
+  		@grd1: user ∈ loggedInUser						//User must be logged in
+  	then
+  		@act1: loggedInUser ≔ loggedInUser ∖ {user}
+	end
+	
+	/*
+	 * Needs to specify an auction's start and end time and keep track of how long an auction has been created for
+	 */
+	//Creates an auction
+	event CreateAuction   
+	any user auction item name reservePrice where
+		@grd1: user ∈ registeredUser ∩ loggedInUser	∩ dom(userPoints)											//User must be registered, logged in and registered with penalty points
+		@grd2: userPoints(user) < 3																				//User must have less than 3 penalty points
+		@grd3: auction ∈ (AUCTION ∖ (createdAuction	∪ startedAuction ∪ endedAuction ∪ cancelledAuction))		//Auction must be of type auction and  must not have been created, started, ended already or cancelled
+		@grd4: item ∈ (ITEM ∖ auctionedItem)																	//Item must be of type item and not be up for auction already
+		@grd5: name ∈ ITEMNAME																					//Item's name must be of type item name
+		@grd6: reservePrice ∈ ℕ1																				//Reserve price must be a non-zero natural number
+	then
+		@act1: createdAuction ≔ createdAuction ∪ {auction}
+		@act2: auctionedItem ≔ auctionedItem ∪ {item}
+		@act3: auctionSeller ≔ auctionSeller ∪ {auction ↦ user}
+		@act4: auctionItem ≔ auctionItem ∪ {auction ↦ item}
+		@act5: itemName ≔ itemName ∪ {item ↦ name}
+		@act6: auctionReservePrice ≔ auctionReservePrice ∪ {auction ↦ reservePrice}
+	end
+	
+	/**
+	 * Needs to check if an auction's start time has been reached
+	 */
+	//Starts an auction
+	event StartAuction  
+	any auction startedStatus where
+		@grd1: auction ∈ createdAuction												//Auction must have been created
+		@grd2: auction ∉ startedAuction ∪ endedAuction ∪ cancelledAuction			//Auction must not have started or ended already
+		@grd3: startedStatus ∈ STATUS												//Auction's state must be of type state 
+	then
+		@act1: startedAuction ≔ startedAuction ∪ {auction}
+		@act2: auctionStatus ≔ auctionStatus ∪ {auction ↦ startedStatus}
+	end
+	
+	//Adds the first bid to an auction
+	event FirstBidOnAuction
+	any auction user amount where
+		@grd1: user ∈ registeredUser ∩ loggedInUser				//User must be registered and logged in to bid
+		@grd2: auction ∈ createdAuction	∩ startedAuction		//Auction must have been created and started
+		@grd3: auction ∉ dom(auctionBid)						//Auction must not have ended already and must not have bids
+		@grd4: amount ∈ ℕ1										//Bid must be a non-zero natural number
+		@grd5:(auction ↦ user) ∉ auctionSeller					//Bidder must not be auction's seller
+	then
+		@act1: auctionHighestBidder(auction) ≔ user
+		@act2: auctionBid ≔ auctionBid ∪ {auction ↦ amount}
+		@act3: auctionBidder ≔ auctionBidder ∪ {auction ↦ user}
+	end
+	
+	//Adds the 2nd, 3rd and so on bids to an auction
+	event BidOnAuction
+	any auction user amount where
+	  	@grd1: user ∈ registeredUser ∩ loggedInUser								//User must be registered and logged in to bid
+		@grd2: auction ∈ createdAuction ∩ startedAuction ∩ dom(auctionBid)		//Auction must have been created, started and have bids
+		@grd3: amount ∈ ℕ1														//Bid must be a non-zero natural number
+		@grd4:(auction ↦ user) ∉ auctionSeller									//Bidder must not be auction's seller		
+		@grd5: ∀ bid · bid ∈ auctionBid[{auction}] ⇒ bid < amount 				//Bid made must be greater than all bids already made on auction 																				//Bid must be a non-zero natural number
+	then
+		@act1: auctionHighestBidder(auction) ≔ user
+		@act2: auctionBid ≔ auctionBid ∪ {auction ↦ amount}
+		@act3: auctionBidder ≔ auctionBidder ∪ {auction ↦ user}
+	end
+	
+	/**
+	 * Needs to stop keeping track of how long an auction has been created for
+	 * Needs to inform bidders that bidded on an auction that the auction has been cancelled
+	 */
+	//Cancels a penalty worthy auction 
+	event CancelAuctionWithPenalty  
+	any auction user where
+		@grd1: auction ∈ createdAuction	∩ startedAuction ∩ dom(auctionReservePrice) ∩ dom(auctionBid)		//Auction must have been created, started, have a reserve price and have bids
+		@grd2: auction ∉  endedAuction	∪ cancelledAuction													//Auction must not have ended already and must have not been cancelled
+		@grd3: user ∈ registeredUser ∩ loggedInUser ∩ dom(userPoints)										//User must be registered, logged in and be registered with penalty points to cancel auction
+		@grd4: (auction ↦ user) ∈ auctionSeller																//User must be auction's seller
+		@grd5: ∀ bid · bid ∈ auctionBid[{auction}] ⇒ bid ≥ auctionReservePrice(auction)					//Auction's bid must be higher than or equal to auction's reserve price
+	then
+		@act1: userPoints(user) ≔ userPoints(user) + 1
+		@act2: startedAuction ≔ startedAuction ∖ {auction}
+		@act3: cancelledAuction ≔ cancelledAuction ∪ {auction}
+		@act4: auctionStatus ≔ {auction} ⩤ auctionStatus
+	end
+	
+	/**
+	 * Needs to stop keeping track of how long an auction has been created for
+	 * Needs to inform bidders that bidded on an auction that the auction has been cancelled
+	 */
+	//Cancels a non-penalty worthy auction
+	event CancelAuctionWithoutPenalty  
+	any auction user where
+		@grd1: auction ∈ createdAuction	∩ startedAuction ∩ dom(auctionReservePrice) ∩ dom(auctionBid)		//Auction must have been created, started, have a reserve price and have bids
+		@grd2: auction ∉  endedAuction	∪ cancelledAuction													//Auction must not have ended already and must not have been cancelled
+		@grd3: user ∈ registeredUser ∩ loggedInUser															//User must be registered and logged in to cancel auction
+		@grd4: (auction ↦ user) ∈ auctionSeller																//User must be auction's seller
+		@grd5: ∀ bid · bid ∈ auctionBid[{auction}] ⇒ bid < auctionReservePrice(auction)					//Auction's bid must not be higher than auction's reserve price
+	then
+		@act1: startedAuction ≔ startedAuction ∖ {auction}
+		@act2: cancelledAuction ≔ cancelledAuction ∪ {auction}
+		@act3: auctionStatus ≔ {auction} ⩤ auctionStatus
+	end
+	
+	/**
+	 * Needs to stop keeping track of how long an auction has been created for
+	 */
+	//Cancels an auction with no bids
+	event CancelAuctionWithoutBids 
+	any auction user where
+		@grd1: auction ∈ createdAuction																					//Auction must have been created
+		@grd2: auction ∉ endedAuction ∪ cancelledAuction ∪ dom (auctionBid)			//Auction must have not ended already, must not have been cancelled and must not have bids
+		@grd3: user ∈ registeredUser ∩ loggedInUser									//User must be registered and logged in to cancel auction
+		@grd4: (auction ↦ user) ∈ auctionSeller										//User must be auction's seller
+	then
+		@act1: startedAuction ≔ startedAuction ∖ {auction}
+		@act2: cancelledAuction ≔ cancelledAuction ∪ {auction}
+		@act3: auctionStatus ≔ {auction} ⩤ auctionStatus
+	end
+	
+	//Views the status of an auction
+	event viewAuctionStatus
+	any auction user status where
+		@grd1: auction ∈ startedAuction ∪ endedAuction				//Auction must have been started or ended
+		@grd2: (auction ↦ user) ∈ auctionSeller						//User must be auction's seller
+		@grd3: status = auctionStatus(auction)						//Determines auction's status
+	end
+		
+	/*
+	 * Needs to check if an auction's end time has been reached 
+	 * Needs to start keeping track of how long of an auction's feedback period is left
+	 */
+	//Closes an auction with bids that failed 
+	event closeFailedAuctionWithBids  
+	any auction failedStatus where
+		@grd1: auction ∈ createdAuction ∩ startedAuction ∩ dom(auctionReservePrice) ∩ dom (auctionBid)		//Auction must have been created, started, have a reserve price and have bids
+		@grd2: auction ∉ endedAuction ∪ cancelledAuction													//Auction must not have ended already and must have not been cancelled
+		@grd3: ∀ bid · bid ∈ auctionBid[{auction}] ⇒ bid < auctionReservePrice(auction)					//Auction's bid must not be higher than auction's reserve price
+		@grd4: failedStatus ∈ STATUS																		//Auction's state must be of type state
+	then
+		@act1: startedAuction ≔ startedAuction ∖ {auction}
+		@act2: endedAuction ≔ endedAuction ∪ {auction}
+		@act3: auctionStatus(auction) ≔ failedStatus
+	end
+	
+	/*
+	 * Needs to check if an auction's end time has been reached 
+	 * Needs to start keeping track of how long of an auction's feedback period is left
+	 */
+	//Closes an auction without bids that failed
+	event closeFailedAuctionWithoutBids  
+	any auction failedStatus where
+		@grd1: auction ∈ createdAuction ∩ startedAuction								//Auction must have been created and started
+		@grd2: auction ∉ endedAuction ∪ cancelledAuction ∪ dom(auctionBid)				//Auction must have not ended already, must have not been cancelled and auction must have no bids
+		@grd3: failedStatus ∈ STATUS													//Auction's state must be of type state
+	then
+		@act1: startedAuction ≔ startedAuction ∖ {auction}
+		@act2: endedAuction ≔ endedAuction ∪ {auction}
+		@act3: auctionStatus(auction) ≔ failedStatus
+	end
+	
+	/*
+	 * Needs to check if an auction's end time has been reached 
+	 * Needs to start keeping track of how long of an auction's feedback period is left
+	 */
+	//Closes an auction that succeeded
+	event closeSuccessfullAuction 
+	any auction successfulStatus bidderToInform where
+		@grd1: auction ∈ createdAuction ∩ startedAuction ∩ dom(auctionReservePrice) ∩ dom (auctionBid) ∩ dom(auctionHighestBidder) 	//Auction must have been created, started, have a reserve price, bids and a highest bidder
+		@grd2: auction ∉ endedAuction ∪ cancelledAuction													//Auction must not have ended and must have not been cancelled
+		@grd3: ∀ bid · bid ∈ auctionBid[{auction}] ⇒ bid ≥ auctionReservePrice(auction)					//Auction's bid must be equal to or higher than auction's reserve price
+		@grd4: successfulStatus ∈ STATUS																	//Auction's state must be of type state
+		@grd5: bidderToInform = auctionHighestBidder(auction)										//Determines bidder that need to be informed that they won the auction
+	then
+		@act1: startedAuction ≔ startedAuction ∖ {auction}
+		@act2: endedAuction ≔ endedAuction ∪ {auction}
+		@act3: auctionStatus(auction) ≔ successfulStatus
+	end
+	
+	/*
+	 * Needs to check if feedback period is still ongoing
+	 */
+	//Gives feedback to a seller
+	event giveSellerFeedback 
+	any auction feedback where
+		@grd1: auction ∈ endedAuction ∩	 dom(auctionSeller)		//Auction must have ended already and auction must have a seller 
+		@grd2: auctionSeller(auction) ∈ registeredUser			//Auction's seller must be a registered user
+		@grd3: feedback ∈ FEEDBACK								//Feedback must be of type feedback
+	then
+		@act1: userFeedback ≔ userFeedback ∪ {auctionSeller(auction) ↦ feedback}
+	end
+
+	//Checks an auction's history of bids
+	event viewHistoryOfBids
+	any auction bids where
+		@grd1: auction ∈ startedAuction ∩ dom(auctionBid)		//Auction must have started and have bids
+		@grd2: bids = auctionBid[{auction}]						//Determines bids that want to be viewed
+	end
+end

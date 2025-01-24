@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="15">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="FEEDBACK" org.eventb.core.type="ℙ(FEEDBACK)"/>
+        <org.eventb.core.poIdentifier name="ITEMNAME" org.eventb.core.type="ℙ(ITEMNAME)"/>
+        <org.eventb.core.poIdentifier name="ID" org.eventb.core.type="ℙ(ID)"/>
+        <org.eventb.core.poIdentifier name="AUCTION" org.eventb.core.type="ℙ(AUCTION)"/>
+        <org.eventb.core.poIdentifier name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
+        <org.eventb.core.poIdentifier name="NAME" org.eventb.core.type="ℙ(NAME)"/>
+        <org.eventb.core.poIdentifier name="ITEM" org.eventb.core.type="ℙ(ITEM)"/>
+        <org.eventb.core.poIdentifier name="USER" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="PASSWORD" org.eventb.core.type="ℙ(PASSWORD)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="userID" org.eventb.core.type="ℙ(USER×ID)"/>
+        <org.eventb.core.poIdentifier name="startedAuction" org.eventb.core.type="ℙ(AUCTION)"/>
+        <org.eventb.core.poIdentifier name="auctionEndTime" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="createdAuction" org.eventb.core.type="ℙ(AUCTION)"/>
+        <org.eventb.core.poIdentifier name="endedAuction" org.eventb.core.type="ℙ(AUCTION)"/>
+        <org.eventb.core.poIdentifier name="auctionSeller" org.eventb.core.type="ℙ(AUCTION×USER)"/>
+        <org.eventb.core.poIdentifier name="auctionFeedbackEndTime" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="userPoints" org.eventb.core.type="ℙ(USER×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auctionFeedbackTimer" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auctionTimer" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auctionBid" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auctionStartTime" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auctionBidder" org.eventb.core.type="ℙ(AUCTION×USER)"/>
+        <org.eventb.core.poIdentifier name="activeID" org.eventb.core.type="ℙ(ID)"/>
+        <org.eventb.core.poIdentifier name="registeredUser" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="userName" org.eventb.core.type="ℙ(USER×NAME)"/>
+        <org.eventb.core.poIdentifier name="loggedInUser" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="auctionItem" org.eventb.core.type="ℙ(AUCTION×ITEM)"/>
+        <org.eventb.core.poIdentifier name="userPassword" org.eventb.core.type="ℙ(USER×PASSWORD)"/>
+        <org.eventb.core.poIdentifier name="auctionHighestBidder" org.eventb.core.type="ℙ(AUCTION×USER)"/>
+        <org.eventb.core.poIdentifier name="auctionedItem" org.eventb.core.type="ℙ(ITEM)"/>
+        <org.eventb.core.poIdentifier name="itemName" org.eventb.core.type="ℙ(ITEM×ITEMNAME)"/>
+        <org.eventb.core.poIdentifier name="userFeedback" org.eventb.core.type="ℙ(USER×FEEDBACK)"/>
+        <org.eventb.core.poIdentifier name="auctionReservePrice" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auctionStatus" org.eventb.core.type="ℙ(AUCTION×STATUS)"/>
+        <org.eventb.core.poIdentifier name="cancelledAuction" org.eventb.core.type="ℙ(AUCTION)"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTimf" org.eventb.core.predicate="registeredUser⊆USER" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0YsNIPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTimg" org.eventb.core.predicate="loggedInUser⊆registeredUser" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0YsNIfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTimh" org.eventb.core.predicate="activeID⊆ID" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0YsNIvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTimi" org.eventb.core.predicate="userName∈registeredUser → NAME" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0Ys0MPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTimj" org.eventb.core.predicate="userID∈registeredUser ⤖ activeID" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0Ys0MfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTimk" org.eventb.core.predicate="userPassword∈registeredUser → PASSWORD" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0Ys0MvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTiml" org.eventb.core.predicate="userPoints∈registeredUser → ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0YtbQPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTimm" org.eventb.core.predicate="userFeedback∈registeredUser ↔ FEEDBACK" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0YtbQfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTimn" org.eventb.core.predicate="createdAuction⊆AUCTION" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0YtbQvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTimo" org.eventb.core.predicate="startedAuction⊆createdAuction" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0YuCUPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTimp" org.eventb.core.predicate="endedAuction⊆createdAuction" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0YupYPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTimq" org.eventb.core.predicate="cancelledAuction⊆createdAuction" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0YupYfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTimr" org.eventb.core.predicate="startedAuction∩endedAuction=(∅ ⦂ ℙ(AUCTION))" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0YvQcPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTims" org.eventb.core.predicate="startedAuction∩cancelledAuction=(∅ ⦂ ℙ(AUCTION))" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0YvQcfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTimt" org.eventb.core.predicate="endedAuction∩cancelledAuction=(∅ ⦂ ℙ(AUCTION))" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0Yv3gPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTimu" org.eventb.core.predicate="startedAuction∩endedAuction∩cancelledAuction=(∅ ⦂ ℙ(AUCTION))" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0Yv3gfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTimv" org.eventb.core.predicate="auctionedItem⊆ITEM" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0YwekPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTimw" org.eventb.core.predicate="auctionSeller∈createdAuction → registeredUser" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0YwekfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTimx" org.eventb.core.predicate="auctionItem∈createdAuction ⤖ auctionedItem" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0YxFoPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTimy" org.eventb.core.predicate="itemName∈auctionedItem → ITEMNAME" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0YxFofBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTimz" org.eventb.core.predicate="auctionReservePrice∈createdAuction → ℕ1" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0YxFovBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTim{" org.eventb.core.predicate="auctionHighestBidder∈startedAuction∪endedAuction∪cancelledAuction ⇸ registeredUser" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0YxssPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTim|" org.eventb.core.predicate="auctionBid∈startedAuction∪endedAuction∪cancelledAuction ↔ ℕ1" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0YxssfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTim}" org.eventb.core.predicate="auctionBidder∈startedAuction∪endedAuction∪cancelledAuction ↔ registeredUser" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0YyTwPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="auctionFeedbackEndTim~" org.eventb.core.predicate="auctionStatus∈startedAuction∪endedAuction → STATUS" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.invariant#_0YyTwfBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="INITIALISATION/inv26/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimf"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(AUCTION×ℤ))∈(∅ ⦂ ℙ(AUCTION)) → ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X8mQPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0YyTwvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0X_pkPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X8mQPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#INITIALISATION\/inv26\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv27/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimf"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(AUCTION×ℤ))∈(∅ ⦂ ℙ(AUCTION)) → ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X9NUPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0YyTwvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0X_pkPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X9NUPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#INITIALISATION\/inv27\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv28/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimf"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(AUCTION×ℤ))∈(∅ ⦂ ℙ(AUCTION)) ∖ ((∅ ⦂ ℙ(AUCTION))∪(∅ ⦂ ℙ(AUCTION))) → ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X90YPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0YyTwvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0X_pkPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X90YPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#INITIALISATION\/inv28\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv29/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimf"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(AUCTION×ℤ))∈(∅ ⦂ ℙ(AUCTION))∪(∅ ⦂ ℙ(AUCTION)) ⇸ ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X-bcPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0YyTwvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0X_pkPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X-bcPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#INITIALISATION\/inv29\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv30/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimf"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(AUCTION×ℤ))∈(∅ ⦂ ℙ(AUCTION))∪(∅ ⦂ ℙ(AUCTION)) ⇸ ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X_CgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0YyTwvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0X_pkPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X_CgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#INITIALISATION\/inv30\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauctionFeedbackEndTimf" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="auctionFeedbackEndTime'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auctionHighestBidder'" org.eventb.core.type="ℙ(AUCTION×USER)"/>
+        <org.eventb.core.poIdentifier name="auctionedItem'" org.eventb.core.type="ℙ(ITEM)"/>
+        <org.eventb.core.poIdentifier name="createdAuction'" org.eventb.core.type="ℙ(AUCTION)"/>
+        <org.eventb.core.poIdentifier name="userName'" org.eventb.core.type="ℙ(USER×NAME)"/>
+        <org.eventb.core.poIdentifier name="itemName'" org.eventb.core.type="ℙ(ITEM×ITEMNAME)"/>
+        <org.eventb.core.poIdentifier name="userPoints'" org.eventb.core.type="ℙ(USER×ℤ)"/>
+        <org.eventb.core.poIdentifier name="endedAuction'" org.eventb.core.type="ℙ(AUCTION)"/>
+        <org.eventb.core.poIdentifier name="userFeedback'" org.eventb.core.type="ℙ(USER×FEEDBACK)"/>
+        <org.eventb.core.poIdentifier name="auctionStartTime'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auctionFeedbackTimer'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="activeID'" org.eventb.core.type="ℙ(ID)"/>
+        <org.eventb.core.poIdentifier name="auctionBid'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="userPassword'" org.eventb.core.type="ℙ(USER×PASSWORD)"/>
+        <org.eventb.core.poIdentifier name="auctionTimer'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auctionEndTime'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auctionStatus'" org.eventb.core.type="ℙ(AUCTION×STATUS)"/>
+        <org.eventb.core.poIdentifier name="startedAuction'" org.eventb.core.type="ℙ(AUCTION)"/>
+        <org.eventb.core.poIdentifier name="auctionSeller'" org.eventb.core.type="ℙ(AUCTION×USER)"/>
+        <org.eventb.core.poIdentifier name="auctionItem'" org.eventb.core.type="ℙ(AUCTION×ITEM)"/>
+        <org.eventb.core.poIdentifier name="auctionReservePrice'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="userID'" org.eventb.core.type="ℙ(USER×ID)"/>
+        <org.eventb.core.poIdentifier name="loggedInUser'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="auctionBidder'" org.eventb.core.type="ℙ(AUCTION×USER)"/>
+        <org.eventb.core.poIdentifier name="registeredUser'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="cancelledAuction'" org.eventb.core.type="ℙ(AUCTION)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauctionFeedbackEndTimf" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTIDENTauctionFeedbackEndTimf" org.eventb.core.poStamp="6"/>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauctionFeedbackEndTimg" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="userName'" org.eventb.core.type="ℙ(USER×NAME)"/>
+        <org.eventb.core.poIdentifier name="name" org.eventb.core.type="NAME"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="userPoints'" org.eventb.core.type="ℙ(USER×ℤ)"/>
+        <org.eventb.core.poIdentifier name="loginID" org.eventb.core.type="ID"/>
+        <org.eventb.core.poIdentifier name="activeID'" org.eventb.core.type="ℙ(ID)"/>
+        <org.eventb.core.poIdentifier name="password" org.eventb.core.type="PASSWORD"/>
+        <org.eventb.core.poIdentifier name="userPassword'" org.eventb.core.type="ℙ(USER×PASSWORD)"/>
+        <org.eventb.core.poIdentifier name="userID'" org.eventb.core.type="ℙ(USER×ID)"/>
+        <org.eventb.core.poIdentifier name="registeredUser'" org.eventb.core.type="ℙ(USER)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauctionFeedbackEndTimg" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTIDENTauctionFeedbackEndTimg" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈USER ∖ registeredUser" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y0I8PBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Y0wAvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="name∈NAME" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y0I8PBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Y1XEPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="loginID∈ID ∖ activeID" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y0I8PBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Y1XEfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="password∈PASSWORD" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y0I8PBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Y1XEvBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauctionFeedbackEndTimh" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="loginID" org.eventb.core.type="ID"/>
+        <org.eventb.core.poIdentifier name="password" org.eventb.core.type="PASSWORD"/>
+        <org.eventb.core.poIdentifier name="loggedInUser'" org.eventb.core.type="ℙ(USER)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauctionFeedbackEndTimh" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTIDENTauctionFeedbackEndTimh" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈registeredUser" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y2lMfBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Y3MQfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="user∉loggedInUser" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y2lMfBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Y3MQvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="user ↦ loginID∈userID" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y2lMfBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Y3MQ_BZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="user ↦ password∈userPassword" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y2lMfBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Y3MRPBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauctionFeedbackEndTimi" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="loggedInUser'" org.eventb.core.type="ℙ(USER)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauctionFeedbackEndTimi" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTIDENTauctionFeedbackEndTimi" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈loggedInUser" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y3zUfBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Y4aYPBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="CreateAuction/inv26/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimj"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auctionStartTime∪{auction ↦ startTime}∈createdAuction∪{auction} → ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X8mQPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y4aYvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YDT8fBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X8mQPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#CreateAuction\/inv26\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="CreateAuction/inv27/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimj"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auctionEndTime∪{auction ↦ endTime}∈createdAuction∪{auction} → ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X9NUPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y4aYvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YDT8fBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X9NUPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#CreateAuction\/inv27\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="CreateAuction/inv28/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimj"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auctionTimer∪{auction ↦ 0}∈(createdAuction∪{auction}) ∖ (endedAuction∪cancelledAuction) → ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X90YPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y4aYvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YDT8fBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X90YPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#CreateAuction\/inv28\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauctionFeedbackEndTimj" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="auctionedItem'" org.eventb.core.type="ℙ(ITEM)"/>
+        <org.eventb.core.poIdentifier name="createdAuction'" org.eventb.core.type="ℙ(AUCTION)"/>
+        <org.eventb.core.poIdentifier name="item" org.eventb.core.type="ITEM"/>
+        <org.eventb.core.poIdentifier name="itemName'" org.eventb.core.type="ℙ(ITEM×ITEMNAME)"/>
+        <org.eventb.core.poIdentifier name="name" org.eventb.core.type="ITEMNAME"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="reservePrice" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="auctionStartTime'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="endTime" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="auctionTimer'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auctionEndTime'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auction" org.eventb.core.type="AUCTION"/>
+        <org.eventb.core.poIdentifier name="startTime" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="auctionSeller'" org.eventb.core.type="ℙ(AUCTION×USER)"/>
+        <org.eventb.core.poIdentifier name="auctionItem'" org.eventb.core.type="ℙ(AUCTION×ITEM)"/>
+        <org.eventb.core.poIdentifier name="auctionReservePrice'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauctionFeedbackEndTimj" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTIDENTauctionFeedbackEndTimj" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈registeredUser∩loggedInUser∩dom(userPoints)" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y4aYvBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Y5BdPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="userPoints(user)&lt;3" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y4aYvBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Y5ogPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="auction∈AUCTION ∖ (createdAuction∪startedAuction∪endedAuction∪cancelledAuction)" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y4aYvBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Y5ogfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="item∈ITEM ∖ auctionedItem" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y4aYvBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Y5ogvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="name∈ITEMNAME" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y4aYvBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Y5og_BZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="reservePrice∈ℕ1" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y4aYvBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Y6PkPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="startTime∈ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YDT8fBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YEiEfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="endTime∈ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YDT8fBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YFJIPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="startTime&lt;endTime" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YDT8fBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YFwMPBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="AuctionClock/inv28/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimk"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auctionTimer{auction ↦ auctionTimer(auction)+1}∈createdAuction ∖ (endedAuction∪cancelledAuction) → ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X90YPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YG-UfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X90YPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#AuctionClock\/inv28\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="AuctionClock/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimk"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auction∈dom(auctionTimer)∧auctionTimer∈AUCTION ⇸ ℤ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YG-UfBZEe2j4_jG1n8ytw|org.eventb.core.action#_0YIzgfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YG-UfBZEe2j4_jG1n8ytw|org.eventb.core.action#_0YIzgfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimk"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauctionFeedbackEndTimk" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="auctionTimer'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auction" org.eventb.core.type="AUCTION"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauctionFeedbackEndTimk" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTIDENTauctionFeedbackEndTimk" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="auction∈createdAuction∩dom(auctionTimer)" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YG-UfBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YIMcPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="auction∉endedAuction∪cancelledAuction" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YG-UfBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YIzgPBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="StartAuction/grd5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTHYPauctionFeedbackEndTimlstartedStatuv"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auction∈dom(auctionStartTime)∧auctionStartTime∈AUCTION ⇸ ℤ∧auction∈dom(auctionTimer)∧auctionTimer∈AUCTION ⇸ ℤ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YJakPBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YKBofBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YJakPBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YKBofBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTHYPauctionFeedbackEndTimlstartedStatuv"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauctionFeedbackEndTiml" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="startedStatus" org.eventb.core.type="STATUS"/>
+        <org.eventb.core.poIdentifier name="auctionStatus'" org.eventb.core.type="ℙ(AUCTION×STATUS)"/>
+        <org.eventb.core.poIdentifier name="auction" org.eventb.core.type="AUCTION"/>
+        <org.eventb.core.poIdentifier name="startedAuction'" org.eventb.core.type="ℙ(AUCTION)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPauctionFeedbackEndTimlstartedStatuv" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTIDENTauctionFeedbackEndTiml" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="auction∈createdAuction" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y62o_BZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Y8EwPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="auction∉startedAuction∪endedAuction∪cancelledAuction" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y62o_BZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Y8EwfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="startedStatus∈STATUS" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y62o_BZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Y8EwvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="auction∈dom(auctionTimer)∩dom(auctionStartTime)" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YJakPBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YKBoPBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauctionFeedbackEndTiml" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTHYPauctionFeedbackEndTimlstartedStatuv" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="{auction ↦ auctionStartTime(auction)}={auction ↦ auctionTimer(auction)}" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YJakPBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YKBofBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauctionFeedbackEndTimm" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="auctionHighestBidder'" org.eventb.core.type="ℙ(AUCTION×USER)"/>
+        <org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="auctionBid'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auction" org.eventb.core.type="AUCTION"/>
+        <org.eventb.core.poIdentifier name="auctionBidder'" org.eventb.core.type="ℙ(AUCTION×USER)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauctionFeedbackEndTimm" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTIDENTauctionFeedbackEndTimm" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈registeredUser∩loggedInUser" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y8r0vBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Y9S4_BZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="auction∈createdAuction∩startedAuction" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y8r0vBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Y958PBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="auction∉dom(auctionBid)" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y8r0vBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Y958fBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y8r0vBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Y958vBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="auction ↦ user∉auctionSeller" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y8r0vBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Y-hAPBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauctionFeedbackEndTimn" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="auctionHighestBidder'" org.eventb.core.type="ℙ(AUCTION×USER)"/>
+        <org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="auctionBid'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auction" org.eventb.core.type="AUCTION"/>
+        <org.eventb.core.poIdentifier name="auctionBidder'" org.eventb.core.type="ℙ(AUCTION×USER)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauctionFeedbackEndTimn" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTIDENTauctionFeedbackEndTimn" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈registeredUser∩loggedInUser" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y_vIPBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZA9QPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="auction∈createdAuction∩startedAuction∩dom(auctionBid)" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y_vIPBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZA9QfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y_vIPBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZBkUPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="auction ↦ user∉auctionSeller" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y_vIPBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZBkUfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀bid⦂ℤ·bid∈auctionBid[{auction}]⇒bid&lt;amount" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0Y_vIPBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZCLYPBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="CancelAuctionWithPenalty/inv28/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimo"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{auction} ⩤ auctionTimer∈createdAuction ∖ (endedAuction∪(cancelledAuction∪{auction})) → ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X90YPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZDZgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YL20fBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X90YPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#CancelAuctionWithPenalty\/inv28\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="CancelAuctionWithPenalty/inv29/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimo"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auctionFeedbackEndTime∪{auction ↦ feedbackDuration}∈endedAuction∪(cancelledAuction∪{auction}) ⇸ ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X-bcPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZDZgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YL20fBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X-bcPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#CancelAuctionWithPenalty\/inv29\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="CancelAuctionWithPenalty/inv30/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimo"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auctionFeedbackTimer∪{auction ↦ 0}∈endedAuction∪(cancelledAuction∪{auction}) ⇸ ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X_CgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZDZgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YL20fBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X_CgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#CancelAuctionWithPenalty\/inv30\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauctionFeedbackEndTimo" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="auctionFeedbackEndTime'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="feedbackDuration" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="biddersToInform" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="userPoints'" org.eventb.core.type="ℙ(USER×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auctionFeedbackTimer'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auctionTimer'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auctionStatus'" org.eventb.core.type="ℙ(AUCTION×STATUS)"/>
+        <org.eventb.core.poIdentifier name="auction" org.eventb.core.type="AUCTION"/>
+        <org.eventb.core.poIdentifier name="startedAuction'" org.eventb.core.type="ℙ(AUCTION)"/>
+        <org.eventb.core.poIdentifier name="cancelledAuction'" org.eventb.core.type="ℙ(AUCTION)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauctionFeedbackEndTimo" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTIDENTauctionFeedbackEndTimo" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="auction∈createdAuction∩startedAuction∩dom(auctionReservePrice)∩dom(auctionBid)" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZDZgPBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZEAkfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="auction∉endedAuction∪cancelledAuction" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZDZgPBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZEAkvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="user∈registeredUser∩loggedInUser∩dom(userPoints)" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZDZgPBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZEnoPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="auction ↦ user∈auctionSeller" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZDZgPBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZEnofBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀bid⦂ℤ·bid∈auctionBid[{auction}]⇒bid≥auctionReservePrice(auction)" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZDZgPBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZFOsPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="feedbackDuration∈ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YL20fBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YNE8fBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="biddersToInform=auctionBid[{auction}]" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YL20fBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YNsAPBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="CancelAuctionWithoutPenalty/inv28/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimp"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{auction} ⩤ auctionTimer∈createdAuction ∖ (endedAuction∪(cancelledAuction∪{auction})) → ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X90YPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZF1wvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YO6IfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X90YPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#CancelAuctionWithoutPenalty\/inv28\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="CancelAuctionWithoutPenalty/inv29/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimp"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auctionFeedbackEndTime∪{auction ↦ feedbackDuration}∈endedAuction∪(cancelledAuction∪{auction}) ⇸ ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X-bcPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZF1wvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YO6IfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X-bcPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#CancelAuctionWithoutPenalty\/inv29\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="CancelAuctionWithoutPenalty/inv30/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimp"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auctionFeedbackTimer∪{auction ↦ 0}∈endedAuction∪(cancelledAuction∪{auction}) ⇸ ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X_CgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZF1wvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YO6IfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X_CgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#CancelAuctionWithoutPenalty\/inv30\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauctionFeedbackEndTimp" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="auctionFeedbackEndTime'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="feedbackDuration" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="biddersToInform" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="auctionFeedbackTimer'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auctionTimer'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auctionStatus'" org.eventb.core.type="ℙ(AUCTION×STATUS)"/>
+        <org.eventb.core.poIdentifier name="auction" org.eventb.core.type="AUCTION"/>
+        <org.eventb.core.poIdentifier name="startedAuction'" org.eventb.core.type="ℙ(AUCTION)"/>
+        <org.eventb.core.poIdentifier name="cancelledAuction'" org.eventb.core.type="ℙ(AUCTION)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauctionFeedbackEndTimp" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTIDENTauctionFeedbackEndTimp" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="auction∈createdAuction∩startedAuction∩dom(auctionReservePrice)∩dom(auctionBid)" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZF1wvBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZGc0vBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="auction∉endedAuction∪cancelledAuction" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZF1wvBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZGc0_BZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="user∈registeredUser∩loggedInUser" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZF1wvBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZGc1PBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="auction ↦ user∈auctionSeller" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZF1wvBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZHD4PBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀bid⦂ℤ·bid∈auctionBid[{auction}]⇒bid&lt;auctionReservePrice(auction)" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZF1wvBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZHD4fBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="feedbackDuration∈ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YO6IfBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YQvUPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="biddersToInform=auctionBid[{auction}]" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YO6IfBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YQvUfBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="CancelAuctionWithoutBids/inv28/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimq"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{auction} ⩤ auctionTimer∈createdAuction ∖ (endedAuction∪(cancelledAuction∪{auction})) → ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X90YPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZHq8vBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YSkgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X90YPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#CancelAuctionWithoutBids\/inv28\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="CancelAuctionWithoutBids/inv29/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimq"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auctionFeedbackEndTime∈endedAuction∪(cancelledAuction∪{auction}) ⇸ ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X-bcPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZHq8vBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YSkgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X-bcPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#CancelAuctionWithoutBids\/inv29\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="CancelAuctionWithoutBids/inv30/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimq"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auctionFeedbackTimer∈endedAuction∪(cancelledAuction∪{auction}) ⇸ ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X_CgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZHq8vBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YSkgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X_CgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#CancelAuctionWithoutBids\/inv30\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauctionFeedbackEndTimq" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="auctionTimer'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auctionStatus'" org.eventb.core.type="ℙ(AUCTION×STATUS)"/>
+        <org.eventb.core.poIdentifier name="auction" org.eventb.core.type="AUCTION"/>
+        <org.eventb.core.poIdentifier name="startedAuction'" org.eventb.core.type="ℙ(AUCTION)"/>
+        <org.eventb.core.poIdentifier name="cancelledAuction'" org.eventb.core.type="ℙ(AUCTION)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauctionFeedbackEndTimq" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTIDENTauctionFeedbackEndTimq" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="auction∈createdAuction" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZHq8vBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZISAfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="auction∉endedAuction∪cancelledAuction∪dom(auctionBid)" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZHq8vBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZISAvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="user∈registeredUser∩loggedInUser" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZHq8vBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZISA_BZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="auction ↦ user∈auctionSeller" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZHq8vBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZI5EPBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauctionFeedbackEndTimr" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="auction" org.eventb.core.type="AUCTION"/>
+        <org.eventb.core.poIdentifier name="status" org.eventb.core.type="STATUS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauctionFeedbackEndTimr" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTIDENTauctionFeedbackEndTimr" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="auction∈startedAuction∪endedAuction" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZJgIfBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZKHMfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="auction ↦ user∈auctionSeller" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZJgIfBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZKHMvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="status=auctionStatus(auction)" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZJgIfBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZKHM_BZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="closeFailedAuctionWithBids/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTHYPauctionFeedbackEndTimsfailedStatuw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auction∈dom(auctionEndTime)∧auctionEndTime∈AUCTION ⇸ ℤ∧auction∈dom(auctionTimer)∧auctionTimer∈AUCTION ⇸ ℤ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YTyofBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YVAwPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YTyofBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YVAwPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTHYPauctionFeedbackEndTimsfailedStatuw"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="closeFailedAuctionWithBids/inv28/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTims"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{auction} ⩤ auctionTimer∈createdAuction ∖ ((endedAuction∪{auction})∪cancelledAuction) → ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X90YPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZKuQPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YTyofBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X90YPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#closeFailedAuctionWithBids\/inv28\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="closeFailedAuctionWithBids/inv29/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTims"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auctionFeedbackEndTime∪{auction ↦ feedbackDuration}∈(endedAuction∪{auction})∪cancelledAuction ⇸ ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X-bcPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZKuQPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YTyofBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X-bcPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#closeFailedAuctionWithBids\/inv29\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="closeFailedAuctionWithBids/inv30/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTims"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auctionFeedbackTimer∪{auction ↦ 0}∈(endedAuction∪{auction})∪cancelledAuction ⇸ ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X_CgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZKuQPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YTyofBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X_CgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#closeFailedAuctionWithBids\/inv30\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauctionFeedbackEndTims" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="auctionFeedbackEndTime'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="failedStatus" org.eventb.core.type="STATUS"/>
+        <org.eventb.core.poIdentifier name="feedbackDuration" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="endedAuction'" org.eventb.core.type="ℙ(AUCTION)"/>
+        <org.eventb.core.poIdentifier name="auctionFeedbackTimer'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auctionTimer'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auctionStatus'" org.eventb.core.type="ℙ(AUCTION×STATUS)"/>
+        <org.eventb.core.poIdentifier name="auction" org.eventb.core.type="AUCTION"/>
+        <org.eventb.core.poIdentifier name="startedAuction'" org.eventb.core.type="ℙ(AUCTION)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPauctionFeedbackEndTimsfailedStatuw" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTIDENTauctionFeedbackEndTims" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="auction∈createdAuction∩startedAuction∩dom(auctionReservePrice)∩dom(auctionBid)" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZKuQPBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZKuQ_BZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="auction∉endedAuction∪cancelledAuction" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZKuQPBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZLVUPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀bid⦂ℤ·bid∈auctionBid[{auction}]⇒bid&lt;auctionReservePrice(auction)" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZKuQPBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZLVUfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="failedStatus∈STATUS" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZKuQPBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZLVUvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="auction∈dom(auctionEndTime)∩dom(auctionTimer)" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YTyofBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YUZsvBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauctionFeedbackEndTims" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTHYPauctionFeedbackEndTimsfailedStatuw" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="{auction ↦ auctionEndTime(auction)}={auction ↦ auctionTimer(auction)}" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YTyofBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YVAwPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="feedbackDuration∈ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YTyofBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YVAwfBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="closeFailedAuctionWithoutBids/grd5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTHYPauctionFeedbackEndTimtfailedStatuw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auction∈dom(auctionEndTime)∧auctionEndTime∈AUCTION ⇸ ℤ∧auction∈dom(auctionTimer)∧auctionTimer∈AUCTION ⇸ ℤ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YW18PBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YXdAfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YW18PBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YXdAfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTHYPauctionFeedbackEndTimtfailedStatuw"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="closeFailedAuctionWithoutBids/inv28/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimt"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{auction} ⩤ auctionTimer∈createdAuction ∖ ((endedAuction∪{auction})∪cancelledAuction) → ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X90YPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZL8Y_BZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YW18PBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X90YPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#closeFailedAuctionWithoutBids\/inv28\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="closeFailedAuctionWithoutBids/inv29/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimt"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auctionFeedbackEndTime∈(endedAuction∪{auction})∪cancelledAuction ⇸ ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X-bcPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZL8Y_BZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YW18PBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X-bcPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#closeFailedAuctionWithoutBids\/inv29\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="closeFailedAuctionWithoutBids/inv30/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimt"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auctionFeedbackTimer∈(endedAuction∪{auction})∪cancelledAuction ⇸ ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X_CgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZL8Y_BZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YW18PBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X_CgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#closeFailedAuctionWithoutBids\/inv30\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauctionFeedbackEndTimt" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="failedStatus" org.eventb.core.type="STATUS"/>
+        <org.eventb.core.poIdentifier name="endedAuction'" org.eventb.core.type="ℙ(AUCTION)"/>
+        <org.eventb.core.poIdentifier name="auctionTimer'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auctionStatus'" org.eventb.core.type="ℙ(AUCTION×STATUS)"/>
+        <org.eventb.core.poIdentifier name="auction" org.eventb.core.type="AUCTION"/>
+        <org.eventb.core.poIdentifier name="startedAuction'" org.eventb.core.type="ℙ(AUCTION)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPauctionFeedbackEndTimtfailedStatuw" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTIDENTauctionFeedbackEndTimt" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="auction∈createdAuction∩startedAuction" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZL8Y_BZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZMjcvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="auction∉endedAuction∪cancelledAuction∪dom(auctionBid)" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZL8Y_BZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZMjc_BZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="failedStatus∈STATUS" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZL8Y_BZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZNKgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="auction∈dom(auctionEndTime)∩dom(auctionTimer)" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YW18PBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YXdAPBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauctionFeedbackEndTimt" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTHYPauctionFeedbackEndTimtfailedStatuw" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="{auction ↦ auctionEndTime(auction)}={auction ↦ auctionTimer(auction)}" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YW18PBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YXdAfBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="closeSuccessfullAuction/grd7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTHYPauctionFeedbackEndTimusuccessfulStatuw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auction∈dom(auctionEndTime)∧auctionEndTime∈AUCTION ⇸ ℤ∧auction∈dom(auctionTimer)∧auctionTimer∈AUCTION ⇸ ℤ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YYEEfBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YZSMfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YYEEfBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YZSMfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTHYPauctionFeedbackEndTimusuccessfulStatuw"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="closeSuccessfullAuction/inv28/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimu"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{auction} ⩤ auctionTimer∈createdAuction ∖ ((endedAuction∪{auction})∪cancelledAuction) → ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X90YPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZNxkvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YYEEfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X90YPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#closeSuccessfullAuction\/inv28\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="closeSuccessfullAuction/inv29/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimu"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auctionFeedbackEndTime∪{auction ↦ feedbackDuration}∈(endedAuction∪{auction})∪cancelledAuction ⇸ ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X-bcPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZNxkvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YYEEfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X-bcPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#closeSuccessfullAuction\/inv29\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="closeSuccessfullAuction/inv30/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimu"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auctionFeedbackTimer∪{auction ↦ 0}∈(endedAuction∪{auction})∪cancelledAuction ⇸ ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X_CgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZNxkvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YYEEfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X_CgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#closeSuccessfullAuction\/inv30\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauctionFeedbackEndTimu" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="auctionFeedbackEndTime'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="feedbackDuration" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="endedAuction'" org.eventb.core.type="ℙ(AUCTION)"/>
+        <org.eventb.core.poIdentifier name="auctionFeedbackTimer'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auctionTimer'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auctionStatus'" org.eventb.core.type="ℙ(AUCTION×STATUS)"/>
+        <org.eventb.core.poIdentifier name="auction" org.eventb.core.type="AUCTION"/>
+        <org.eventb.core.poIdentifier name="startedAuction'" org.eventb.core.type="ℙ(AUCTION)"/>
+        <org.eventb.core.poIdentifier name="successfulStatus" org.eventb.core.type="STATUS"/>
+        <org.eventb.core.poIdentifier name="bidderToInform" org.eventb.core.type="USER"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPauctionFeedbackEndTimusuccessfulStatuw" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTIDENTauctionFeedbackEndTimu" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="auction∈createdAuction∩startedAuction∩dom(auctionReservePrice)∩dom(auctionBid)∩dom(auctionHighestBidder)" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZNxkvBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZO_sPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="auction∉endedAuction∪cancelledAuction" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZNxkvBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZO_sfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀bid⦂ℤ·bid∈auctionBid[{auction}]⇒bid≥auctionReservePrice(auction)" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZNxkvBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZO_svBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="successfulStatus∈STATUS" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZNxkvBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZPmwPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="bidderToInform=auctionHighestBidder(auction)" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZNxkvBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZPmwfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="auction∈dom(auctionEndTime)∩dom(auctionTimer)" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YYEEfBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YZSMPBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauctionFeedbackEndTimu" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTHYPauctionFeedbackEndTimusuccessfulStatuw" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="{auction ↦ auctionEndTime(auction)}={auction ↦ auctionTimer(auction)}" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YYEEfBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YZSMfBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="feedbackDuration∈ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YYEEfBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YZ5QPBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauctionFeedbackEndTimv" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="userFeedback'" org.eventb.core.type="ℙ(USER×FEEDBACK)"/>
+        <org.eventb.core.poIdentifier name="feedback" org.eventb.core.type="FEEDBACK"/>
+        <org.eventb.core.poIdentifier name="auction" org.eventb.core.type="AUCTION"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauctionFeedbackEndTimv" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTIDENTauctionFeedbackEndTimv" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="auction∈endedAuction∩dom(auctionSeller)" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZQN0vBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZQ04vBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="auctionSeller(auction)∈registeredUser" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZQN0vBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZQ04_BZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="feedback∈FEEDBACK" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZQN0vBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZRb8PBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="auction∈dom(auctionFeedbackTimer)" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YbHYPBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YbucfBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="FeedbackClock/inv30/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auctionFeedbackTimer{auction ↦ auctionFeedbackTimer(auction)+1}∈endedAuction∪cancelledAuction ⇸ ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X_CgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YcVgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X_CgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#FeedbackClock\/inv30\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="FeedbackClock/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auction∈dom(auctionFeedbackTimer)∧auctionFeedbackTimer∈AUCTION ⇸ ℤ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YcVgPBZEe2j4_jG1n8ytw|org.eventb.core.action#_0YdjoPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YcVgPBZEe2j4_jG1n8ytw|org.eventb.core.action#_0YdjoPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimw"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauctionFeedbackEndTimw" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="auctionFeedbackTimer'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auction" org.eventb.core.type="AUCTION"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauctionFeedbackEndTimw" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTIDENTauctionFeedbackEndTimw" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="auction∈endedAuction∩dom(auctionFeedbackTimer)" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YcVgPBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0Yc8kPBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="endFeedbackPeriod/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTHYPauctionFeedbackEndTimx'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="auction∈dom(auctionFeedbackEndTime)∧auctionFeedbackEndTime∈AUCTION ⇸ ℤ∧auction∈dom(auctionFeedbackTimer)∧auctionFeedbackTimer∈AUCTION ⇸ ℤ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YdjofBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YexwPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YdjofBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YexwPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTHYPauctionFeedbackEndTimx'"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="endFeedbackPeriod/inv30/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTALLHYPauctionFeedbackEndTimx"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{auction} ⩤ auctionFeedbackTimer∈endedAuction∪cancelledAuction ⇸ ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X_CgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YdjofBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X_CgPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poSequent#endFeedbackPeriod\/inv30\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauctionFeedbackEndTimx" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="auctionFeedbackTimer'" org.eventb.core.type="ℙ(AUCTION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="auction" org.eventb.core.type="AUCTION"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPauctionFeedbackEndTimx'" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTIDENTauctionFeedbackEndTimx" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="auction∈endedAuction∩dom(auctionFeedbackTimer)∩dom(auctionFeedbackEndTime)" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YdjofBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YeKsfBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauctionFeedbackEndTimx" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTHYPauctionFeedbackEndTimx'" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="{auction ↦ auctionFeedbackEndTime(auction)}={auction ↦ auctionFeedbackTimer(auction)}" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.event#_0YdjofBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0YexwPBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTauctionFeedbackEndTimy" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="bids" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poIdentifier name="auction" org.eventb.core.type="AUCTION"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPauctionFeedbackEndTimy" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#EVTIDENTauctionFeedbackEndTimy" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="auction∈startedAuction∩dom(auctionBid)" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZRb8vBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZSDAvBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="bids=auctionBid[{auction}]" org.eventb.core.source="/AuctionSystem/AuctionSystem.bum|org.eventb.core.machineFile#AuctionSystem|org.eventb.core.event#_0ZRb8vBZEe2j4_jG1n8ytw|org.eventb.core.guard#_0ZSDA_BZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystem2.bpo|org.eventb.core.poFile#AuctionSystem2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="auctionStartTime∈createdAuction → ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X8mQPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="auctionEndTime∈createdAuction → ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X9NUPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="auctionTimer∈createdAuction ∖ (endedAuction∪cancelledAuction) → ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X90YPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="auctionFeedbackEndTime∈endedAuction∪cancelledAuction ⇸ ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X-bcPBZEe2j4_jG1n8ytw"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="auctionFeedbackTimer∈endedAuction∪cancelledAuction ⇸ ℕ" org.eventb.core.source="/AuctionSystem/AuctionSystem2.bum|org.eventb.core.machineFile#AuctionSystem2|org.eventb.core.invariant#_0X_CgPBZEe2j4_jG1n8ytw"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

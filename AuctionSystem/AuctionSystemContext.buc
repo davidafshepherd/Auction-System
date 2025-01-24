@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xcontext.base" org.eventb.core.generated="false" version="3">
+    <org.eventb.core.carrierSet name="_ucX9gPBKEe2C_-d9H0e01A" org.eventb.core.generated="false" org.eventb.core.identifier="USER"/>
+    <org.eventb.core.carrierSet name="_ucX9gfBKEe2C_-d9H0e01A" org.eventb.core.generated="false" org.eventb.core.identifier="NAME"/>
+    <org.eventb.core.carrierSet name="_ucX9gvBKEe2C_-d9H0e01A" org.eventb.core.generated="false" org.eventb.core.identifier="ID"/>
+    <org.eventb.core.carrierSet name="_ucX9g_BKEe2C_-d9H0e01A" org.eventb.core.generated="false" org.eventb.core.identifier="PASSWORD"/>
+    <org.eventb.core.carrierSet name="_ucX9hPBKEe2C_-d9H0e01A" org.eventb.core.generated="false" org.eventb.core.identifier="FEEDBACK"/>
+    <org.eventb.core.carrierSet name="_ucX9hfBKEe2C_-d9H0e01A" org.eventb.core.generated="false" org.eventb.core.identifier="AUCTION"/>
+    <org.eventb.core.carrierSet name="_ucX9hvBKEe2C_-d9H0e01A" org.eventb.core.generated="false" org.eventb.core.identifier="ITEM"/>
+    <org.eventb.core.carrierSet name="_ucX9h_BKEe2C_-d9H0e01A" org.eventb.core.generated="false" org.eventb.core.identifier="ITEMNAME"/>
+    <org.eventb.core.carrierSet name="_ucX9iPBKEe2C_-d9H0e01A" org.eventb.core.generated="false" org.eventb.core.identifier="STATUS"/>
+</org.eventb.core.contextFile>

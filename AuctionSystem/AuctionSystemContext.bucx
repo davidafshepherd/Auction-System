@@ -1,0 +1,13 @@
+context AuctionSystemContext
+sets
+	USER
+	NAME
+	ID
+	PASSWORD
+	FEEDBACK
+	
+	AUCTION
+	ITEM
+	ITEMNAME
+	STATUS
+end

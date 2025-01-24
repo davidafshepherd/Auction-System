@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="3">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="3">
+        <org.eventb.core.poIdentifier name="FEEDBACK" org.eventb.core.type="ℙ(FEEDBACK)"/>
+        <org.eventb.core.poIdentifier name="ITEMNAME" org.eventb.core.type="ℙ(ITEMNAME)"/>
+        <org.eventb.core.poIdentifier name="ID" org.eventb.core.type="ℙ(ID)"/>
+        <org.eventb.core.poIdentifier name="AUCTION" org.eventb.core.type="ℙ(AUCTION)"/>
+        <org.eventb.core.poIdentifier name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
+        <org.eventb.core.poIdentifier name="NAME" org.eventb.core.type="ℙ(NAME)"/>
+        <org.eventb.core.poIdentifier name="ITEM" org.eventb.core.type="ℙ(ITEM)"/>
+        <org.eventb.core.poIdentifier name="USER" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="PASSWORD" org.eventb.core.type="ℙ(PASSWORD)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/AuctionSystem/AuctionSystemContext.bpo|org.eventb.core.poFile#AuctionSystemContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="3"/>
+</org.eventb.core.poFile>
